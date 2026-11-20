@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Castle Cleaning | House cleaning in Sherwood Park and Strathcona County</title>
+<meta name="description" content="Small, local, family owned and operated residential and commercial cleaning in Sherwood Park and Strathcona County. Fully licensed, bonded and insured.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#18222D;        /* castle night: the logo's black, cooled */
+  --ink-2:#223040;
+  --stone:#E3E4DE;      /* cut limestone */
+  --stone-deep:#C9CBC2;
+  --chalk:#FBFBF8;
+  --gold:#C29A35;       /* from the CHCA award seals */
+  --gold-soft:#E7CF8E;
+  --text:#18222D;
+  --muted:#4E5A66;
+  --serif:"Gloock", "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --wrap:1180px;
+  --merlon:44px;
+}
+*,*::before,*::after{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--text);background:var(--chalk);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.005em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 16px/1 var(--sans);text-decoration:none;padding:17px 26px;border-radius:2px;border:2px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-soft)}
+.btn-ink{background:var(--ink);color:var(--chalk)}
+.btn-ink:hover{background:var(--ink-2)}
+.btn-line{border-color:currentColor;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--chalk);border-color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* battlements: the one signature device */
+.battlement{height:22px;background:linear-gradient(90deg,var(--bc,var(--ink)) 50%,transparent 50%) 0 0/var(--merlon) 100% repeat-x}
+
+/* top bar */
+.topbar{background:var(--ink);color:#D5DAE0;font-size:14px}
+.topbar .wrap{display:flex;gap:28px;align-items:center;justify-content:space-between;min-height:42px;flex-wrap:wrap}
+.topbar a{text-decoration:none;color:#fff}
+.topbar a:hover{color:var(--gold-soft)}
+.topbar .tb-left,.topbar .tb-right{display:flex;gap:24px;flex-wrap:wrap}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,251,248,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--stone-deep)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--chalk)}
+header.site .wrap{display:flex;align-items:center;gap:28px;min-height:78px}
+.brand img{height:68px;width:auto}
+nav.main{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+nav.main a{font-size:15px;font-weight:500;text-decoration:none;padding:8px 11px;border-radius:2px;color:var(--ink)}
+nav.main a:hover{background:var(--stone)}
+nav.main a[aria-current]{box-shadow:inset 0 -2px 0 var(--gold)}
+.menu-toggle{display:none;margin-left:auto;background:none;border:2px solid var(--ink);padding:9px 12px;font:600 15px var(--sans);color:var(--ink);border-radius:2px;cursor:pointer}
+
+/* hero */
+.hero{background:var(--stone);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:end;padding-top:72px;padding-bottom:0}
+.hero-copy{padding-bottom:88px}
+.hero .where{font-size:16px;color:var(--muted);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.hero .where::before{content:"";width:34px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(46px,6.6vw,92px);line-height:.98;margin-bottom:28px;max-width:11ch}
+.hero .lede{font-size:19px;max-width:46ch;color:#2B3742;margin-bottom:34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.hero .assure{font-size:15px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.hero .assure svg{width:20px;height:20px;color:var(--ink)}
+.window{position:relative;align-self:end}
+.window .arch{border-radius:999px 999px 0 0;overflow:hidden;aspect-ratio:4/5;background:var(--stone-deep);border:10px solid var(--chalk);border-bottom:0}
+.window .arch img{width:100%;height:100%;object-fit:cover}
+.window .seal{position:absolute;left:-46px;bottom:56px;width:132px;background:var(--chalk);padding:14px 12px 10px;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;box-shadow:0 0 0 1px var(--stone-deep)}
+.window .seal img{width:86px}
+.hero + .battlement{--bc:var(--ink);background-color:var(--stone)}
+
+/* fact band */
+.facts{background:var(--ink);color:#E9ECEF}
+.facts ul{list-style:none;margin:0;padding:34px 0 42px;display:grid;grid-template-columns:repeat(4,1fr)}
+.facts li{padding:6px 26px;border-left:1px solid rgba(255,255,255,.14)}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:24px;color:#fff;line-height:1.2;margin-bottom:6px}
+.facts span{font-size:15px;color:#B9C2CB}
+
+/* section heads */
+.sec{padding:110px 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.sec-head h2{font-size:clamp(36px,4.4vw,58px)}
+.sec-head p{color:var(--muted);max-width:52ch;margin:0}
+
+/* rooms */
+.rooms{display:grid;grid-template-columns:290px 1fr;gap:0;border:1px solid var(--stone-deep);background:#fff}
+.room-tabs{display:flex;flex-direction:column;background:var(--stone);border-right:1px solid var(--stone-deep)}
+.room-tab{all:unset;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:20px 24px;border-bottom:1px solid var(--stone-deep);font-family:var(--serif);font-size:23px;color:var(--ink);transition:background .2s}
+.room-tab small{font-family:var(--sans);font-size:13px;color:var(--muted)}
+.room-tab:hover{background:#ECEDE8}
+.room-tab[aria-selected="true"]{background:#fff;box-shadow:inset 4px 0 0 var(--gold);margin-right:-1px}
+.room-tab:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.room-panel{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:36px}
+.room-panel[hidden]{display:none}
+.room-panel figure{margin:0;aspect-ratio:4/3;overflow:hidden;background:var(--stone)}
+.room-panel figure img{width:100%;height:100%;object-fit:cover}
+.room-panel figure.empty{display:grid;place-items:center}
+.room-panel figure.empty img{width:55%;height:auto;object-fit:contain;opacity:.5}
+.room-panel h3{font-size:34px;margin-bottom:6px}
+.room-panel .sub{color:var(--muted);font-size:15px;margin-bottom:20px}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.checks li{position:relative;padding-left:28px;font-size:16px;line-height:1.45}
+.checks li::before{content:"";position:absolute;left:0;top:.28em;width:15px;height:15px;border:2px solid var(--gold);border-radius:2px}
+.checks li::after{content:"";position:absolute;left:5px;top:.36em;width:5px;height:9px;border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.checks.two{grid-template-columns:1fr 1fr;column-gap:22px}
+
+/* pricing */
+.pricing{background:var(--ink);color:#E9ECEF;position:relative}
+.pricing .battlement{--bc:var(--ink);background-color:var(--chalk);position:absolute;top:-22px;left:0;right:0}
+.price-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.price-grid h2{color:#fff;font-size:clamp(36px,4.4vw,58px);margin-bottom:24px}
+.price-grid .intro{color:#C3CBD3;max-width:48ch}
+.rate{border:1px solid rgba(255,255,255,.18);padding:40px 40px 34px}
+.rate .num{font-family:var(--serif);font-size:clamp(84px,10vw,140px);line-height:.85;color:var(--gold-soft)}
+.rate .per{font-size:18px;color:#fff;margin:14px 0 28px}
+.rate ul{list-style:none;margin:0 0 30px;padding:0;border-top:1px solid rgba(255,255,255,.14)}
+.rate li{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14);font-size:16px;color:#D5DBE1}
+.rate li b{color:#fff;font-weight:600}
+.freq{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 34px;padding:0;list-style:none}
+.freq li{border:1px solid var(--gold);color:var(--gold-soft);padding:9px 18px;border-radius:999px;font-size:15px}
+
+/* add-ons */
+.addons-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.addons-grid .window{align-self:start;position:sticky;top:120px}
+.addons-grid .window .arch{aspect-ratio:3/4;border:0}
+.addons-grid h2{font-size:clamp(36px,4.4vw,58px);margin-bottom:18px}
+.addons{margin:34px 0 34px;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.addons li{display:grid;grid-template-columns:220px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--stone-deep)}
+.addons b{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.25}
+.addons span{color:var(--muted);font-size:16px}
+
+/* booking steps */
+.steps-sec{background:var(--stone)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{padding:0 28px 0 0;position:relative}
+.steps li::before{counter-increment:s;content:counter(s);display:block;font-family:var(--serif);font-size:64px;line-height:1;color:var(--ink);margin-bottom:18px;width:84px;height:84px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:999px 999px 0 0;font-size:40px}
+.steps h3{font-size:24px;margin-bottom:10px}
+.steps p{color:#3F4A55;font-size:16px}
+
+/* recognition */
+.honours{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:center}
+.honours h2{font-size:clamp(34px,4vw,52px);margin-bottom:18px}
+.honours .note{color:var(--muted);font-size:15px}
+.badges{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+.badges .b{background:#fff;border:1px solid var(--stone-deep);padding:22px;display:grid;place-items:center}
+.badges .b.tall{grid-row:span 2;padding:34px}
+.badges .b img{width:100%;height:auto}
+.badges .b.tall img{max-width:200px}
+
+/* faq */
+.faq-sec{background:#fff;border-top:1px solid var(--stone-deep)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
+.faq-grid .stick{position:sticky;top:120px}
+.faq-grid h2{font-size:clamp(36px,4.4vw,58px);margin-bottom:18px}
+.faq-grid .stick p{color:var(--muted)}
+details{border-bottom:1px solid var(--stone-deep)}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-family:var(--serif);font-size:22px;line-height:1.3;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;border:solid var(--ink);border-width:0 2px 2px 0;transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-20%) rotate(-135deg)}
+details p{color:#3F4A55;padding:0 40px 18px 0;margin:0 0 4px}
+
+/* final cta */
+.final{background:var(--ink);color:#E9ECEF;position:relative;text-align:left}
+.final .battlement{--bc:var(--ink);background-color:#fff;position:absolute;top:-22px;left:0;right:0}
+.final-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center}
+.final h2{color:#fff;font-size:clamp(40px,5.4vw,74px);margin-bottom:22px;max-width:14ch}
+.final p{color:#C3CBD3;max-width:50ch}
+.contact-card{border:1px solid rgba(255,255,255,.18);padding:34px}
+.contact-card dt{font-size:14px;color:#9EA9B4;margin-top:18px}
+.contact-card dt:first-child{margin-top:0}
+.contact-card dd{margin:4px 0 0;font-size:19px;color:#fff}
+.contact-card dd a{text-decoration:none;border-bottom:1px solid var(--gold)}
+.contact-card dd a:hover{color:var(--gold-soft)}
+.contact-card .fine{font-size:14px;color:#9EA9B4;margin-top:6px}
+.final .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.final .btn-line{color:#fff}
+.final .btn-line:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+/* footer */
+footer{background:#121A23;color:#AEB8C2;font-size:15px;padding:72px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer img{height:92px;width:auto;margin-bottom:18px}
+footer h4{font:600 16px var(--sans);color:#fff;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none;color:#D5DBE1}
+footer a:hover{color:var(--gold-soft)}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px;font-size:14px}
+.foot-bottom a{border-bottom:1px solid var(--gold)}
+
+/* mobile action bar */
+.mbar{display:none}
+
+/* responsive */
+@media (max-width:1060px){
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--chalk);flex-direction:column;padding:12px 20px 20px;border-bottom:1px solid var(--stone-deep)}
+  nav.main.open{display:flex}
+  .menu-toggle{display:block}
+  header.site .btn{display:none}
+}
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:20px;padding-top:48px}
+  .hero-copy{padding-bottom:20px}
+  .window{max-width:420px;margin:0 auto;width:100%}
+  .window .seal{left:-12px;width:108px;bottom:40px}
+  .window .seal img{width:70px}
+  .facts ul{grid-template-columns:1fr 1fr;row-gap:24px}
+  .facts li:nth-child(3){border-left:0;padding-left:0}
+  .sec{padding:80px 0}
+  .sec-head,.price-grid,.addons-grid,.honours,.faq-grid,.final-grid{grid-template-columns:1fr;gap:36px}
+  .faq-grid .stick{position:static}
+  .rooms{grid-template-columns:1fr}
+  .room-tabs{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--stone-deep)}
+  .room-tab{flex:none;border-bottom:0;border-right:1px solid var(--stone-deep);font-size:19px;padding:16px 18px}
+  .room-tab small{display:none}
+  .room-tab[aria-selected="true"]{box-shadow:inset 0 -4px 0 var(--gold);margin-right:0}
+  .room-panel{grid-template-columns:1fr;padding:24px;gap:24px}
+  .steps{grid-template-columns:1fr 1fr;row-gap:40px}
+  .addons-grid .window{max-width:380px;position:static}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-grid > div:first-child{grid-column:1/-1}
+}
+@media (max-width:600px){
+  body{font-size:16px;padding-bottom:70px}
+  .wrap{padding:0 20px}
+  .topbar .tb-right{display:none}
+  .brand img{height:54px}
+  header.site .wrap{min-height:66px}
+  .facts ul{grid-template-columns:1fr}
+  .facts li{border-left:0;padding:0}
+  .checks.two{grid-template-columns:1fr}
+  .addons li{grid-template-columns:1fr;gap:4px}
+  .steps{grid-template-columns:1fr}
+  .rate{padding:28px 22px}
+  .badges{grid-template-columns:1fr}
+  .badges .b.tall{grid-row:auto}
+  .foot-grid{grid-template-columns:1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;bottom:0;left:0;right:0;z-index:70;padding-bottom:env(safe-area-inset-bottom,0px);background:var(--ink)}
+  .mbar a{text-align:center;padding:17px 10px;font-weight:600;text-decoration:none;color:#fff}
+  .mbar a + a{background:var(--gold);color:var(--ink)}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-left">
+      <span>Phone or text <a href="tel:+14032030222">403-203-0222</a></span>
+      <a href="mailto:castlecleaning77@gmail.com">castlecleaning77@gmail.com</a>
+    </div>
+    <div class="tb-right">
+      <span>Monday to Friday, 8am to 5pm</span>
+      <span>Sherwood Park and Strathcona County</span>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="https://www.castlecleaning.ca/home" aria-label="Your Castle Cleaning, home"><img src="images/logo.png" alt="Your Castle Cleaning. Because your home is your castle."></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mainnav">Menu</button>
+    <nav class="main" id="mainnav" aria-label="Main">
+      <a href="https://www.castlecleaning.ca/home" aria-current="page">Home</a>
+      <a href="https://www.castlecleaning.ca/about-us">About Us</a>
+      <a href="https://www.castlecleaning.ca/why-choose-us">Why Choose Us?</a>
+      <a href="https://www.castlecleaning.ca/faq">FAQ</a>
+      <a href="https://www.castlecleaning.ca/photos">Photos</a>
+      <a href="https://www.castlecleaning.ca/blog">Blog</a>
+      <a href="https://www.castlecleaning.ca/contact-us">Contact us</a>
+    </nav>
+    <a class="btn btn-ink" href="https://docs.google.com/forms/d/e/1FAIpQLSeR9My9hoh53wEnLvIgvH55e3tMKGHPMIs5Xafng2lIcZE0Sw/viewform?usp=sf_link" target="_blank" rel="noopener">Free Quote</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="where">Sherwood Park and Strathcona County</p>
+      <h1>Because your home is your castle.</h1>
+      <p class="lede">Your Castle Cleaning is a small, local, family owned and operated residential and commercial cleaning company. We work hard for you so you have more free time for the important things in life.</p>
+      <div class="ctas">
+        <a class="btn btn-ink" href="https://docs.google.com/forms/d/e/1FAIpQLSeR9My9hoh53wEnLvIgvH55e3tMKGHPMIs5Xafng2lIcZE0Sw/viewform?usp=sf_link" target="_blank" rel="noopener">Get a free quote</a>
+        <a class="btn btn-line" href="tel:+14032030222"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>403-203-0222</a>
+      </div>
+      <p class="assure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Fully licensed, bonded and insured</p>
+    </div>
+    <div class="window">
+      <div class="arch"><img src="images/hero-kitchen.webp" alt="Freshly cleaned white kitchen with a caddy of cleaning supplies on the island" width="896" height="1050"></div>
+      <div class="seal"><img src="images/chca-accredited.png" alt="CHCA Accredited Business"></div>
+    </div>
+  </div>
+</section>
+<div class="battlement" aria-hidden="true"></div>
+<section class="facts" aria-label="At a glance">
+  <div class="wrap">
+    <ul>
+      <li><strong>Family owned</strong><span>Local and operated by us, right here in Strathcona County</span></li>
+      <li><strong>Your schedule</strong><span>Weekly, bi-weekly, monthly or one time cleaning</span></li>
+      <li><strong>No contracts</strong><span>Flexible on how often you want your house cleaned</span></li>
+      <li><strong>Supplies included</strong><span>We bring all the supplies needed to every job</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="what-we-clean">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>What we clean, room by room</h2>
+      <p>Pick a room to see exactly what's included. Homes and offices across Sherwood Park and Strathcona County get the same detailed list.</p>
+    </div>
+
+    <div class="rooms">
+      <div class="room-tabs" role="tablist" aria-label="Rooms">
+        <button class="room-tab" role="tab" id="t-kitchen" aria-controls="p-kitchen" aria-selected="true">Kitchen <small>9 tasks</small></button>
+        <button class="room-tab" role="tab" id="t-bath" aria-controls="p-bath" aria-selected="false" tabindex="-1">Bathrooms <small>16 tasks</small></button>
+        <button class="room-tab" role="tab" id="t-living" aria-controls="p-living" aria-selected="false" tabindex="-1">Living room <small>5 tasks</small></button>
+        <button class="room-tab" role="tab" id="t-bed" aria-controls="p-bed" aria-selected="false" tabindex="-1">Bedrooms <small>5 tasks</small></button>
+        <button class="room-tab" role="tab" id="t-other" aria-controls="p-other" aria-selected="false" tabindex="-1">Other <small>4 tasks</small></button>
+        <button class="room-tab" role="tab" id="t-office" aria-controls="p-office" aria-selected="false" tabindex="-1">Office cleaning <small>7 tasks</small></button>
+      </div>
+
+      <div class="room-panel" role="tabpanel" id="p-kitchen" aria-labelledby="t-kitchen">
+        <figure><img src="images/kitchen.webp" alt="Clean kitchen with island and stainless appliances" loading="lazy"></figure>
+        <div>
+          <h3>Kitchen</h3><p class="sub">Includes</p>
+          <ul class="checks">
+            <li>Wipe down all counter surfaces and fronts of cabinets and drawers</li>
+            <li>Clean inside and outside of microwave</li>
+            <li>Top and front of appliances</li>
+            <li>Shine kitchen sink and taps</li>
+            <li>Wipe all baseboards, window sills, light switches</li>
+            <li>Sweep and mop floor</li>
+            <li>Dust lights and door frames</li>
+            <li>Empty and replace garbage bag</li>
+            <li>Table and chairs wiped</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="room-panel" role="tabpanel" id="p-bath" aria-labelledby="t-bath" hidden>
+        <figure><img src="images/bathroom.webp" alt="Clean bathroom with glass shower, white vanity and straightened towels" loading="lazy"></figure>
+        <div>
+          <h3>Bathrooms</h3><p class="sub">Includes</p>
+          <ul class="checks two">
+            <li>Dust shelves</li>
+            <li>Clean all mirrors and glass</li>
+            <li>Clean counter tops</li>
+            <li>Polish towel racks, toilet paper holder</li>
+            <li>Dust all light fixtures and clean sink(s)</li>
+            <li>Scrub all showers and tubs</li>
+            <li>Clean and dry shower door, track and glass</li>
+            <li>Clean and dry sink counters and soap dish</li>
+            <li>Clean toilet, inside and outside, base and lid</li>
+            <li>Empty garbage and replace bag</li>
+            <li>Wash floor by hand</li>
+            <li>Dust window sills and window frames</li>
+            <li>Clean cabinet fronts</li>
+            <li>Dust doors and door frames</li>
+            <li>Dust and wipe baseboards</li>
+            <li>Straighten towels</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="room-panel" role="tabpanel" id="p-living" aria-labelledby="t-living" hidden>
+        <figure><img src="images/living-room.webp" alt="Tidy living room with sofa, mirror and dusted lamps" loading="lazy"></figure>
+        <div>
+          <h3>Living room or family room</h3><p class="sub">Includes</p>
+          <ul class="checks">
+            <li>Dust furniture, lamps, lamp shades</li>
+            <li>Clean mirrors</li>
+            <li>Dust baseboards and window sills</li>
+            <li>Clean all light switches and door knobs</li>
+            <li>Vacuum or sweep the floor</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="room-panel" role="tabpanel" id="p-bed" aria-labelledby="t-bed" hidden>
+        <figure><img src="images/bedroom.webp" alt="Freshly cleaned bedroom with a made bed and vacuumed carpet" loading="lazy"></figure>
+        <div>
+          <h3>Bedrooms</h3><p class="sub">Includes</p>
+          <ul class="checks">
+            <li>Clean cobwebs, dust shelves and pictures</li>
+            <li>Dust furniture, lamps, lamp shades and hanging lights</li>
+            <li>Clean window sills and frames</li>
+            <li>Vacuum floor</li>
+            <li>Dust baseboards or bannisters</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="room-panel" role="tabpanel" id="p-other" aria-labelledby="t-other" hidden>
+        <figure><img src="images/fridge-add-ons.webp" alt="Hands wiping the inside of a fridge with a pink cloth" loading="lazy"></figure>
+        <div>
+          <h3>Other</h3><p class="sub">Includes</p>
+          <ul class="checks">
+            <li>Spot wash inside windows</li>
+            <li>Spot wash walls where we can see dirty areas</li>
+            <li>Wipe all light switches</li>
+            <li>Or check out the add ons below</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="room-panel" role="tabpanel" id="p-office" aria-labelledby="t-office" hidden>
+        <figure><img src="images/office.webp" alt="Clean office with tidy desks, empty bins and freshly mopped floor" loading="lazy"></figure>
+        <div>
+          <h3>Office cleaning</h3><p class="sub">Includes</p>
+          <ul class="checks">
+            <li>Kitchen cleaning</li>
+            <li>Bathroom cleaning</li>
+            <li>Wipe all light switches</li>
+            <li>Empty garbage cans</li>
+            <li>Vacuum and mop floors</li>
+            <li>Office cleaning, includes desks, chairs, trash cans etc.</li>
+            <li>Any other office cleaning that is needed</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing sec" id="pricing">
+  <div class="battlement" aria-hidden="true"></div>
+  <div class="wrap price-grid">
+    <div>
+      <h2>Okay, we may not be the lowest...</h2>
+      <p class="intro">We are super efficient and work hard to save you money. We work within your budget and believe communication is key. If you're looking for a house cleaner in Sherwood Park or Strathcona County, look no further.</p>
+      <p class="intro" style="margin-top:22px">Customizable cleaning packages:</p>
+      <ul class="freq">
+        <li>Weekly</li><li>Bi-weekly</li><li>Monthly</li><li>One time cleaning</li>
+      </ul>
+      <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSeR9My9hoh53wEnLvIgvH55e3tMKGHPMIs5Xafng2lIcZE0Sw/viewform?usp=sf_link" target="_blank" rel="noopener">Get a free quote</a>
+    </div>
+    <div class="rate">
+      <div class="num">$50</div>
+      <p class="per">per hour, per person</p>
+      <ul>
+        <li><b>Stopwatch pricing.</b> We start the clock when we begin working and stop it when we're done.</li>
+        <li><b>All supplies brought</b> to every job.</li>
+        <li><b>No contracts to sign.</b> Just give us at least 48 hours notice to cancel a cleaning.</li>
+        <li><b>Your priorities first.</b> We can focus on the priority items on your list.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="add-ons">
+  <div class="wrap addons-grid">
+    <div class="window"><div class="arch"><img src="images/fridge-add-ons.webp" alt="Interior fridge cleaning" loading="lazy"></div></div>
+    <div>
+      <h2>Add ons</h2>
+      <p style="color:var(--muted);max-width:52ch">Each of these jobs can vary so much in length, so they're charged at a reasonable hourly rate.</p>
+      <ul class="addons">
+        <li><b>Interior cabinet cleaning</b><span>Depends on whether items need taking out and putting back, or the cupboard is empty.</span></li>
+        <li><b>Wall cleaning</b><span>We spot clean in a regular clean. A thorough wall washing is by the hour.</span></li>
+        <li><b>Interior window cleaning</b><span>Obvious fingerprints are spot cleaned regularly. A complete window washing is by the hour.</span></li>
+        <li><b>Window blind cleaning</b><span>Charged hourly.</span></li>
+        <li><b>Interior fridge cleaning</b><span>Charged at the hourly rate.</span></li>
+        <li><b>Interior oven cleaning</b><span>Ugh, a tough one, so it's charged by time as well.</span></li>
+        <li><b>Pantry organizing</b><span>Hourly rate plus the cost of organizing containers.</span></li>
+      </ul>
+      <a class="btn btn-line" href="https://www.castlecleaning.ca/contact-us">Ask about a job not listed here</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec steps-sec" id="booking">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>How to book with Castle Cleaning</h2>
+      <p>Request a specific day or time. If we're not already booked for that slot, it's yours.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Get in touch</h3><p>Phone, text or email us to get the ball rolling.</p></li>
+      <li><h3>Quick questions</h3><p>We ask a series of questions and give you an initial quote.</p></li>
+      <li><h3>We meet you</h3><p>We come to your home to meet you and fill out a thorough cleaning list.</p></li>
+      <li><h3>First clean</h3><p>We often do the first cleaning at the time of the meeting, if you prefer.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="trust">
+  <div class="wrap honours">
+    <div>
+      <h2>Fully licensed, bonded and insured</h2>
+      <p>We are fully licensed as a reputable cleaning company in Sherwood Park and Strathcona County, and insured if we were ever to damage anything on your property.</p>
+      <p class="note">Being licensed and insured also lets us clean for businesses, with a special after hours crew for offices.</p>
+    </div>
+    <div class="badges">
+      <div class="b tall"><img src="images/chca-accredited.png" alt="CHCA Accredited Business"></div>
+      <div class="b"><img src="images/award-best-new-business.png" alt="CHCA 2026 Best New Housecleaning Business, Sherwood Park, Your Castle Cleaning"></div>
+      <div class="b"><img src="images/award-customer-service.png" alt="CHCA 2026 Customer Service Excellence, Alberta, Your Castle Cleaning"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec faq-sec" id="faq">
+  <div class="wrap faq-grid">
+    <div class="stick">
+      <h2>Questions you may have</h2>
+      <p>New to house cleaning? Never be afraid to ask us more. Communication is key to us doing the best job possible for you.</p>
+      <a class="btn btn-line" href="https://www.castlecleaning.ca/faq">See all questions</a>
+    </div>
+    <div>
+      <details open><summary>I'm so embarrassed to have someone see my home!</summary><p>Try not to worry. We're not here to judge, we're here to help. Life gets in the way sometimes and we've seen many messes. We love cleaning and hope you'll trust us with yours.</p></details>
+      <details><summary>Do I need to supply my own vacuum, mop etc.?</summary><p>We ask that you supply your own toilet brush for sanitary purposes. The rest is up to you. If you have pets, we prefer you supply the vacuum, mop and broom so we don't transfer pet fur to homes where there may be allergies.</p></details>
+      <details><summary>Are you pet friendly?</summary><p>Yes, we love animals! Tell us about your pet before our first visit. We only ask that aggressive animals, or ones scared of the vacuum, be out of the house while we clean.</p></details>
+      <details><summary>Do you clean homes that have been smoked in?</summary><p>We do not clean smoked in homes, as we value our health and the health of our employees.</p></details>
+      <details><summary>Should I be at home when you come to clean?</summary><p>No, it's up to you. If you're away, provide a spare key, hide one on the property, or give us a garage or door code.</p></details>
+      <details><summary>How do I pay for the cleaning?</summary><p>We bill after each clean, by emailed invoice or a paper invoice left at your house. You can pay by cheque, cash or e-transfer.</p></details>
+      <details><summary>What happens if I'm not happy with the clean?</summary><p>Let us know as soon as possible if we missed or messed up anything. We'll come back and fix it as soon as we're able.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final sec" id="contact">
+  <div class="battlement" aria-hidden="true"></div>
+  <div class="wrap final-grid">
+    <div>
+      <h2>More free time for the important things.</h2>
+      <p>Phone, text or email us and we'll get your free quote started. Cleaning in Sherwood Park and Strathcona County.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSeR9My9hoh53wEnLvIgvH55e3tMKGHPMIs5Xafng2lIcZE0Sw/viewform?usp=sf_link" target="_blank" rel="noopener">Get a free quote</a>
+        <a class="btn btn-line" href="sms:+14032030222">Text us</a>
+      </div>
+    </div>
+    <dl class="contact-card">
+      <dt>Phone or text</dt>
+      <dd><a href="tel:+14032030222">403-203-0222</a></dd>
+      <dd class="fine">A Calgary number, but we live here in Strathcona County, close to Sherwood Park. Just ask us about it.</dd>
+      <dt>Email</dt>
+      <dd><a href="mailto:castlecleaning77@gmail.com">castlecleaning77@gmail.com</a></dd>
+      <dt>Cleaning hours</dt>
+      <dd>Monday to Friday, 8am to 5pm</dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/logo-light.png" alt="Your Castle Cleaning">
+        <p style="max-width:40ch">Small, local, family owned and operated residential and commercial cleaning in Sherwood Park and Strathcona County.</p>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="https://www.castlecleaning.ca/about-us">About Us</a></li>
+          <li><a href="https://www.castlecleaning.ca/why-choose-us">Why Choose Us?</a></li>
+          <li><a href="https://www.castlecleaning.ca/faq">FAQ</a></li>
+          <li><a href="https://www.castlecleaning.ca/photos">Photos</a></li>
+          <li><a href="https://www.castlecleaning.ca/blog">Blog</a></li>
+          <li><a href="https://www.castlecleaning.ca/free-quote">Free Quote</a></li>
+          <li><a href="https://www.castlecleaning.ca/terms-and-conditions">Terms and Conditions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact us</h4>
+        <ul>
+          <li><a href="tel:+14032030222">403-203-0222</a></li>
+          <li><a href="mailto:castlecleaning77@gmail.com">castlecleaning77@gmail.com</a></li>
+          <li>Monday to Friday, 8am to 5pm</li>
+          <li>Sherwood Park and Strathcona County, Alberta</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Your Castle Cleaning. All rights reserved.</span>
+      <span>Design by <a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Cleaning Digital</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+14032030222">Call or text</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeR9My9hoh53wEnLvIgvH55e3tMKGHPMIs5Xafng2lIcZE0Sw/viewform?usp=sf_link" target="_blank" rel="noopener">Free Quote</a>
+</nav>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.room-tab'));
+  function select(t,focus){
+    tabs.forEach(function(x){
+      var on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden=!on;
+    });
+    if(focus)t.focus();
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){select(t)});
+    t.addEventListener('keydown',function(e){
+      var k=e.key,n=null;
+      if(k==='ArrowDown'||k==='ArrowRight')n=tabs[(i+1)%tabs.length];
+      if(k==='ArrowUp'||k==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];
+      if(k==='Home')n=tabs[0];if(k==='End')n=tabs[tabs.length-1];
+      if(n){e.preventDefault();select(n,true)}
+    });
+  });
+  var b=document.querySelector('.menu-toggle'),nav=document.getElementById('mainnav');
+  b.addEventListener('click',function(){var o=nav.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+})();
+</script>
+</body>
+</html>
